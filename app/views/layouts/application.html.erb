@@ -6,11 +6,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+      <h1>
+        <%= link_to root_path, class: "logo" do %>
+          <i class='bx bx-edit-alt'></i>Notes
+        <% end %>
+      </h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

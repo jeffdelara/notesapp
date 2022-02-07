@@ -1,14 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class="card">
+  <h1><%= @note.title %></h1>
+  <div class="date"><%= time_ago_in_words @note.created_at %> ago</div>
+  <div><%= @note.content %></div>
+  <div class="tool">
+    <%= link_to 'Edit', edit_note_path(@note) %> |
+    <%= link_to 'Back', notes_path %>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @note.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @note.content %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>

@@ -47,9 +47,11 @@ div.actions {
 
 .field_with_errors {
   padding: 2px;
-  background-color: #f43f5e;
+  // background-color: #f43f5e;
   display: table; 
-  color: white;
+  color: #f43f5e;
+  width: 100%;
+  font-weight: bold;
 }
 
 #error_explanation {
@@ -91,7 +93,7 @@ input, textarea {
   border-radius: .3rem;
   padding: .3rem;
   font-family: 'Poppins', sans-serif !important;
-  width: 100%;
+  width: 100% !important;
 }
 
 input[type=submit], button, .btn {
